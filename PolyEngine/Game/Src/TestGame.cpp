@@ -8,7 +8,7 @@
 
 using namespace Poly;
 
-void TestGame::Init()
+void InvadersGame::Init()
 {
 	Camera = Engine->GetWorld().SpawnEntity();
 	Engine->GetWorld().AddComponent<Poly::TransformComponent>(Camera);
@@ -28,7 +28,7 @@ void TestGame::Init()
 			Engine->GetWorld().AddComponent<Poly::TransformComponent>(ent);
 			Engine->GetWorld().AddComponent<Poly::MeshRenderingComponent>(ent, "model-tank/tank.fbx");
 			Poly::TransformComponent* entTransform = Engine->GetWorld().GetComponent<Poly::TransformComponent>(ent);
-			entTransform->SetLocalTranslation(Vector(i * 5, 0, j * 10));
+			entTransform->SetLocalTranslation(Vector(i * 5.f, 0.f, j * 10.f));
 			GameEntities.PushBack(ent);
 		}
 	}
@@ -37,7 +37,7 @@ void TestGame::Init()
 	Engine->RegisterUpdatePhase(GameMainSystem::GameUpdate, Poly::Engine::eUpdatePhaseOrder::UPDATE);
 };
 
-void TestGame::Deinit()
+void InvadersGame::Deinit()
 {
 	Engine->GetWorld().DestroyEntity(Camera);
 	for(auto ent : GameEntities)

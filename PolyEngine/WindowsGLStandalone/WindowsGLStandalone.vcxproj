@@ -142,11 +142,11 @@
     <ProjectReference Include="..\Core\Core.vcxproj">
       <Project>{cad95e91-98a5-497a-9726-09c897edb267}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\CzolgInvaders\CzolgInvaders.vcxproj">
+      <Project>{9e07320d-7814-43fa-bb66-7a66754060c5}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Engine\Engine.vcxproj">
       <Project>{d8d95de1-b758-451d-b6d1-ce8c3801892c}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Game\Game.vcxproj">
-      <Project>{1ffe2400-7129-41dc-9efb-08cdead7f66a}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
